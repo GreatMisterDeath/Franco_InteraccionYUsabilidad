@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 3</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                border: 0;
+
+                box-sizing: border-box;
+            }
+            .sky
+            {
+                width: 100%;
+                height: 75vh;
+                background-color: deepskyblue;
+            }
+            .sand
+            {
+                position: relative;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                width: 100%;
+                height: 25vh;
+                background-color: antiquewhite;
+
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+            @keyframes umbrella_pos
+            {
+                0% { margin-left: -10%;}
+                100% { margin-left: 3%;}
+            }
+            .umbrella
+            {
+                position: absolute;
+
+                animation-name: umbrella_pos;
+                animation-duration: 1s;
+                animation-delay: 1.5s;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+
+                margin-left: -100%;
+                height: 15vh;
+            }
+            @keyframes ball_pos
+            {
+                0% { margin-left: 100%;}
+                100% { margin-left: 88%;}
+            }
+            .ball
+            {
+                position: absolute;
+
+                animation-name: ball_pos;
+                animation-duration: 1s;
+                animation-delay: 1.5s;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+
+                margin-left: 100%;
+                height: 15vh;
+            }
+            .people
+            {
+                margin-top: auto;
+                margin-left: 65%;
+                height: 75%;
+
+                z-index: 1;
+            }
+            @keyframes sun_palm_op
+            {
+                0% { opacity: 0.0;}
+                100% { opacity: 1.0;}
+            }
+            .sun
+            {
+                margin-left: 10%;
+                margin-top: 5vh;
+                height: 25%;
+
+                opacity: 0.0;
+
+                animation-name: sun_palm_op;
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes desc_op
+            {
+                0% { opacity: 0.0;}
+                100% { opacity: 1.0;}
+            }
+            .desc
+            {
+                color: white;
+                margin-left: 10%;
+                margin-right: 10%;
+                font-family: 'Verdana', 'Arial';
+
+                opacity: 0.0;
+
+                animation-name: desc_op;
+                animation-duration: 1ms;
+                animation-delay: 1.0s;
+                animation-fill-mode: forwards;
+            }
+            .palm
+            {
+                position: relative;
+
+                display: block;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -40vh;
+
+                width: 50%;
+                height: 25vh;
+
+                opacity: 0.0;
+
+                animation-name: sun_palm_op;
+                animation-duration: 1.0s;
+                animation-delay: 1.5s;
+                animation-fill-mode: forwards;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sky">
+            <img src="assets/img/ejercicio-3_sun.svg" class="sun" alt="sun-alt">
+            <h1 class="desc">Vive el verano</h1>
+            <p class="desc">Con la proteccion numero 1 de Chile podras tener un verano protegido junto a toda tu familia</p>
+        </div>
+        <div class="sand">
+            <img src="assets/img/ejercicio-3_sun-umbrella.svg" class="umbrella" alt="umbrella-alt">
+            <img src="assets/img/ejercicio-3_beach-ball.svg" class="ball" alt="ball-alt">
+            <img src="assets/img/ejercicio-3_people.svg" class="people" alt="people-alt">
+        </div>
+        <img src="assets/img/ejercicio-3_palm-tree.svg" class="palm" alt="palm-alt">
+    </body>
+</html>
